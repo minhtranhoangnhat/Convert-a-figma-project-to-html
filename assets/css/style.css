@@ -15,7 +15,7 @@ body {
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
 }
-/* common - thuộc tính chung cho cả website */
+/* ========== common - thuộc tính chung cho cả website ========== */
 a {
   text-decoration: none;
 }
@@ -40,9 +40,35 @@ a {
 }
 
 .btn:hover {
+  cursor: pointer;
   opacity: 0.9;
 }
-/* Header */
+
+.headingLv2 {
+  color: #171100;
+  font-family: var(--fontHeading);
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.27; /* 126.316% */
+  letter-spacing: -0.76px;
+}
+
+.lineClamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.lineClamp.line2 {
+  --line-clamp: 2;
+}
+
+.breakAll {
+  word-break: break-all;
+}
+
+/* ==================== Header ==================== */
 
 .header {
   background: #fffcf4;
@@ -103,7 +129,7 @@ a {
   margin-left: 49px;
 }
 
-/* hero */
+/* ==================== hero ==================== */
 .hero {
   padding: 56px 0 65px;
   background-color: #fffcf4;
@@ -113,7 +139,7 @@ a {
   display: flex;
 }
 
-/* media block */
+/* ==================== media block ==================== */
 
 .hero .mediaBlock {
   position: relative;
@@ -182,7 +208,7 @@ a {
   line-height: 1.6; /* 166.667% */
 }
 
-/* content block */
+/* ==================== content block ==================== */
 
 .hero .contentBlock {
   width: 52%;
@@ -265,4 +291,126 @@ a {
 
 .hero .stats strong:nth-child(2) {
   margin-right: 28px;
+}
+
+/* ==================== popular ==================== */
+.popular {
+  padding: 65px;
+  margin-top: 135px;
+}
+
+.popularTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popularTop .desc {
+  margin-top: 16px;
+  width: 458px;
+  color: #5f5b53;
+  font-size: 1.8rem;
+  line-height: 1.67; /* 166.667% */
+}
+
+.popularTop .controls {
+  display: flex;
+  gap: 18px;
+}
+
+.popularTop .controlBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--primaryColor);
+  border: 1px solid var(--primaryColor);
+}
+
+.popularTop .controlBtn:hover {
+  background-color: var(--primaryColor);
+  color: #fff;
+  cursor: pointer;
+}
+
+.popular .courseList {
+  margin-top: 55px;
+  display: flex;
+  gap: 30px;
+}
+
+.popular .courseItem {
+  flex: 1;
+  border-radius: 12px;
+  border: 1px solid #e2dfda;
+  background: #fff;
+}
+
+.popular .courseItem:hover {
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: #fff;
+  box-shadow: 0 18px 36px 0 rgba(0, 0, 0, 0.05);
+}
+
+.popular .courseItem .thumb {
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  height: 278px;
+  object-fit: cover;
+}
+
+.popular .courseItem .info {
+  padding: 16px 22px 22px;
+}
+
+.popular .courseItem .foot,
+.popular .courseItem .rating,
+.popular .courseItem .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popular .courseItem .title a {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67; /* 166.667% */
+}
+
+.popular .rating .value {
+  margin-left: 6px;
+  color: #fea31b;
+  font-size: 1.6rem;
+  line-height: 1.75; /* 175% */
+}
+
+.popular .courseItem .desc {
+  margin-top: 6px;
+  color: #5f5b53;
+  font-size: 1.4rem;
+  line-height: 1.86; /* 185.714% */
+}
+
+.popular .courseItem .foot {
+  margin-top: 12px;
+}
+
+.popular .courseItem .price {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67; /* 166.667% */
+}
+
+.popular .courseItem .btnBook {
+  border: none;
+}
+
+.popular .courseItem .btnBook:hover {
+  background-color: var(--primaryColor);
 }
