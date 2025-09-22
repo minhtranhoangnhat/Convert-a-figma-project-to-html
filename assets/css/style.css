@@ -295,7 +295,7 @@ a {
 
 /* ==================== popular ==================== */
 .popular {
-  padding: 65px;
+  padding: 65px 0px;
   margin-top: 135px;
 }
 
@@ -413,4 +413,75 @@ a {
 
 .popular .courseItem .btnBook:hover {
   background-color: var(--primaryColor);
+}
+
+/* ===================== feedback =================== */
+.feedback {
+  margin-top: 135px;
+  padding: 96px 0;
+  background: #2e2100;
+}
+
+.feedbackList {
+  display: flex;
+  overflow: hidden;
+}
+
+.feedbackItem {
+  width: 100%;
+  display: flex;
+  flex-shrink: 0;
+}
+
+.feedbackItem .avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.feedbackItem .info .memberName {
+  margin-top: 18px;
+  color: #f7f7f7;
+  font-family: var(--fontHeading);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.42; /* 141.667% */
+}
+
+.feedbackItem .info .desc {
+  margin-top: 4px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  line-height: 1.86; /* 185.714% */
+}
+
+.feedbackItem .dots {
+  display: flex;
+  gap: 6px;
+  margin-top: 28px;
+}
+
+.feedbackItem .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #634700;
+  cursor: pointer;
+}
+.feedbackItem .dot.active {
+  background: var(--primaryColor);
+  cursor: default;
+}
+
+.feedbackItem .content {
+  width: 68%;
+  margin-left: auto;
+}
+
+.feedbackItem blockquote {
+  color: #fff;
+  font-size: 2.6rem;
+  font-style: italic;
+  line-height: 1.54; /* 153.846% */
 }
