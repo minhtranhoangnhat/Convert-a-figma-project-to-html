@@ -290,7 +290,7 @@ a {
 }
 
 .hero .stats strong:nth-child(2) {
-  margin-right: 28px;
+  margin-left: 28px;
 }
 
 /* ==================== popular ==================== */
@@ -578,12 +578,14 @@ a {
   display: flex;
   margin-top: 55px;
   gap: 30px;
+  overflow: hidden;
 }
 
 .blogs .item {
-  width: 33.3%;
+  width: calc(33.33% - 20px);
   border-radius: 16px;
   background: #fff;
+  flex-shrink: 0;
 }
 
 .blogs .item:hover {
@@ -647,4 +649,24 @@ a {
 
 .blogs .item .btn:hover {
   background: var(--primaryColor);
+}
+
+.blogs .dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 38px;
+}
+
+.blogs .dots .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5f5b53;
+  cursor: pointer;
+}
+
+.blogs .dot.active {
+  background: var(--primaryColor);
+  cursor: default;
 }
